@@ -2,11 +2,92 @@
 <html>
 <head>
     <title>HTML Elements Reference</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+	/* Set height of body and the document to 100% */
+	body, html {
+	  height: 500px;
+	  margin: 20px;
+	  margin-top: 0;
+	  font-family: Arial;
+	  box-sizing: border-box;
+	}
+
+	/* Style tab links */
+	.tablink {
+	  background-color: #000066;
+	  color: white;
+	  float: left;
+	  border: 1px solid;
+	  border-bottom-style: none;
+	  border-top-style: none;
+	  outline: none;
+	  cursor: pointer;
+	  padding: 14px 16px;
+	  font-size: 17px;
+	  width: 33.333333%;
+	  box-sizing: border-box;
+	}
+
+	.tablink:hover {
+	  background-color: #000044;
+	}
+
+	/* Style the tab content (and add height:100% for full page content) */
+	.tabcontent {
+	  color: white;
+	  display: none;
+	  padding: 100px 20px;
+	  height: 100%;
+	  box-sizing: border-box;
+	}
+
+	#LangeGasse {background-color: blue;}
+	#Findelgasse {background-color: blue;}
+	#Mensa {background-color: blue;}
+	</style>
 </head>
 <body>
 
 <h1>Experience FAU just like you where there</h1>
 <p>This is a paragraph.</p>
+
+<button class="tablink" onclick="openPage('LangeGasse', this, 'blue')">Lange Gasse</button>
+<button class="tablink" onclick="openPage('Findelgasse', this, 'blue')">Findelgasse</button>
+<button class="tablink" onclick="openPage('Mensa', this, 'blue')">Mensa</button>
+
+
+<div id="LangeGasse" class="tabcontent">
+  <h3>Lange Gasse</h3>
+  <p>WiSo</p> 
+</div>
+
+<div id="Findelgasse" class="tabcontent">
+  <h3>Findelgasse</h3>
+  <p>WiSo</p>
+</div>
+
+<div id="Mensa" class="tabcontent">
+  <h3>Mensa</h3>
+  <p>Insel Schütt</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+</script>
 
 </body>
 </html>
