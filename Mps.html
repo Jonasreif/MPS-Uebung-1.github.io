@@ -1,12 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>HTML Elements Reference</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>FAU Experience</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+	<!-- custom stylesheet-->
+	<link rel="stylesheet"  href="style1.css">
+	<!-- css & bootstrap link-->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+		<div class="jumbotron hero-image">
+		  <div class="hero-text">
+			<h1>Experience FAU just like you where there</h1>
+			<p class="display-12">Hier wird dir eine Tour durch die Nürnberger Standorte der FAU geboten, 
+				um alle wichtigen Standorte auch während eines Hybridsemesters erleben zu können. <br> 
+				Dafür habe wir eine Aufteilung der Standorte für dich bereitgestellt, 
+				in denene nützliche Informationen für ein Home-Studium und ein Präsenzsemester bietet (sobald es wieder möglich ist). <br>
+			  Viel Spaß :)</p>
+		  </div>
+		</div>
 
-<h1>Experience FAU just like you where there</h1>
-<p>This is a paragraph.</p>
+		<!-- <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
+			<div class="row">
+			  <div class=col-md-4>
+			  <button class="btn btn-secondary" role="button" onclick="openPage('LangeGasse', this, 'grey')">Lange Gasse</button>
+			  </div>
+			  <div class=col-md-4>
+			  <button class="btn btn-secondary" onclick="openPage('Findelgasse', this, 'grey')">Findelgasse</button>
+			  </div>
+			  <div class=col-md-4>
+			  <button class="btn btn-secondary" role="button" href="https://www.w3schools.com/js/">Mensa</button>
+			  </div>
+		  </div>
+		</div> -->
+<div class = "container">
+	<button class="tablink" onclick="openPage('LangeGasse', this, 'blue')">Lange Gasse</button>
+	<button class="tablink" onclick="openPage('Findelgasse', this, 'blue')">Findelgasse</button>
+	<button class="tablink" onclick="openPage('Mensa', this, 'blue')">Mensa</button>
+</div>
+	<div class= "container">
+	<div id="LangeGasse" class="tabcontent">
+	<h3>Lange Gasse</h3>
+	<p>WiSo</p> 
+	</div>
 
+	<div id="Findelgasse" class="tabcontent">
+	<h3>Findelgasse</h3>
+	<p>WiSo</p>
+	</div>
+
+	<div id="Mensa" class="tabcontent">
+	<h3>Mensa</h3>
+	<p>Insel Schütt</p>
+	</div>
+</div>
 </body>
+<!-- All kinds of Scripts -->
+
+<!-- Load JQuery and bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+
+<!-- AOS script for animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init()</script>
 </html>

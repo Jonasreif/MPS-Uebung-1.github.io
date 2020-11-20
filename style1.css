@@ -1,0 +1,70 @@
+	/* Set height of body and the document to 100% */
+	/*body, html {
+        height: 500px;
+        margin: 20px;
+        margin-top: 0;
+        font-family: Arial;
+        box-sizing: border-box;
+      }
+      */
+  
+      /* Style tab links */
+      .tablink {
+        background-color: #000066;
+        color: white;
+        float: left;
+        /* border: 1px solid; */
+        border-bottom-style: none;
+        border-top-style: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 33.333333%;
+        box-sizing: border-box;
+      }
+  
+      .tablink:hover {
+        background-color: #000044;
+      }
+  
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+        box-sizing: border-box;
+      }
+  
+      #LangeGasse {background-color: blue;}
+      #Findelgasse {background-color: blue;}
+      #Mensa {background-color: blue;}
+
+      /* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+ /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/headimage_anim.gif"); */
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.wiso.rw.fau.de/files/2016/03/presse2.jpg");
+  
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
