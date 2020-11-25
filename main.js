@@ -17,9 +17,4 @@ function openPage(pageName, elmnt, color) {
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
 }
-//popup
-function popUp() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-  console.log(11111)
-}
+

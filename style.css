@@ -1,4 +1,10 @@
+/* Style for index.html*/
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
+html {
+  scroll-behavior: smooth;
+}
+  
+
 body {
   padding-top: 0rem;
 }
@@ -29,8 +35,11 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
-
+#rundgang {
+  width: 100%;
+  text-align: center;
+  
+  }
 #mapid { 
   height: 600px; 
 }
-/*test 1 2 3 4 5
