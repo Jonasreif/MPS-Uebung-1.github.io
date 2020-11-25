@@ -15,11 +15,14 @@
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+	<!--Leaflet-->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-	crossorigin=""/>
-	
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+
 </head>
 
 <body>
@@ -29,30 +32,33 @@
 			<p class="display-12">Hier wird dir eine Tour durch die Nürnberger Standorte der FAU geboten,
 				um alle wichtigen Standorte auch während eines Hybridsemesters erleben zu können. <br>
 				Dafür habe wir eine Aufteilung der Standorte für dich bereitgestellt,
-				in denene nützliche Informationen für ein Home-Studium und ein Präsenzsemester bietet (sobald es wieder
+				in denen nützliche Informationen für ein Home-Studium und ein Präsenzsemester bietet (sobald es wieder
 				möglich ist). <br>
 				Viel Spaß :)</p>
-		</div>
-	</div>
-
-
-	<div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
-		<div class="row" id="buttons">
-			<div class=col-md-4>
-				<button class="btn btn-secondary" role="button" href="LangeGasse">Lange Gasse</button>
-			</div>
-
-			<div class=col-md-4>
-				<button class="btn btn-secondary" role="button" href="#Findelgasse">Findelgasse</button>
-			</div>
-	
-			<div class=col-md-4>
-				<a class="btn btn-secondary" role="button" href=#Mensa>Mensa </a>
-			</div>
+			<a class="btn btn-secondary" role="button" href=#mapid>Explore FAU</a>
 		</div>
 	</div>
 	<div id="mapid" class="container py-5"></div>
-	<div class="container" id="LangeGasse">
+	<!--data-aos="fade-up" data-aos-duration="3000" -->
+	<div class="container py-5">
+		<div class="row" id="buttons">
+			<div class=col-md-3>
+				<a class="btn btn-secondary" role="button" href=#LangeGasse>Lange Gasse</a>
+			</div>
+			<div class=col-md-3>
+				<a class="btn btn-secondary" role="button" href=#FindelGasse>Findelgasse</a>
+			</div>
+			<div class=col-md-3>
+				<a class="btn btn-secondary" role="button" href=#Mensa>Mensa</a>
+			</div>
+			<div class=col-md-3>
+				<a class="btn btn-secondary" role="button" href=#Sonstige>Sonstige Places to be </a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container" >
 		<h1 id="LangeGasse">LangeGasse</h1>
 		<p>Platzhalter</p>
 		<p>Platzhalter</p>
@@ -84,8 +90,8 @@
 
 	</div>
 
-	<div class="container" id="Findelgasse">
-		<h1 id="Findelgasse">Findelgasse</h1>
+	<div class="container">
+		<h1 id="FindelGasse">Findelgasse</h1>
 		<p>Platzhalter</p>
 		<p>Platzhalter</p>
 		<p>Platzhalter</p>
@@ -116,8 +122,40 @@
 
 	</div>
 
-	<div class="container" id="Mensa">
+	<div class="container">
 		<h1 id="Mensa">Mensa</h1>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+		<p>Platzhalter</p>
+
+
+
+	</div>
+
+	<div class="container">
+		<h1 id="Sonstige">Sonstige Places to be</h1>
 		<p>Platzhalter</p>
 		<p>Platzhalter</p>
 		<p>Platzhalter</p>
@@ -162,10 +200,29 @@
 	<!-- AOS script for animations -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script> AOS.init()</script>
+	<script>
+		var mymap = L.map('mapid').setView([49.4543342, 11.0849681], 15);
 
-	<!--Leaflet-->
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>,' +
+				'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
+				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+			tileSize: 512,
+			zoomOffset: -1,
+			accessToken: 'pk.eyJ1IjoibXBzbXBzIiwiYSI6ImNraHhnN3loZjBqYWUyem1wN3E2Y2d6aGEifQ.JxQvh-p5rjVXc_gtXcwu2w',
+		}).addTo(mymap);
+
+		var markerFindel = L.marker([49.4523554, 11.0794269]).addTo(mymap);
+		var markerMensa = L.marker([49.4541296, 11.0847015]).addTo(mymap);
+		var markerLange = L.marker([49.4584, 11.0859]).addTo(mymap);
+
+		markerMensa.bindPopup("Hier gehts zur Mensa");
+		markerFindel.bindPopup("Hier gehts zur Findelgasse");
+		markerLange.bindPopup("Hier gehts zur 'LangeGasse'");
+	</script>
+
+
 
 </html>
