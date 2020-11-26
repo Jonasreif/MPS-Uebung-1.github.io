@@ -38,8 +38,37 @@ body {
 #rundgang {
   width: 100%;
   text-align: center;
-  
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
   }
 #mapid { 
   height: 600px; 
+}
+.flex-item{
+  flex:auto;
+  text-align: center;
+  width: 120px;
+}
+h1{
+  text-align: center;
+}
+#Platzhalter {
+  text-align: center;
+}
+#LangeGasse{
+  margin-top: 50px ;
+  margin-bottom: 25px;
+}
+#Findelgasse{
+  margin-top: 50px ;
+  margin-bottom: 25px;
+}
+#Mensa{
+  margin-top: 50px ;
+  margin-bottom: 25px;
+}
+#Sonstige{
+  margin-top: 50px ;
+  margin-bottom: 25px;
 }
